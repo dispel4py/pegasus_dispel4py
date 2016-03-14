@@ -1,0 +1,13 @@
+FROM ubuntu:latest
+
+RUN yes | apt-get install wget
+
+RUN echo "deb http://research.cs.wisc.edu/htcondor/ubuntu/stable/ trusty contrib" >> /etc/apt/sources.list && \
+    wget -qO - http://research.cs.wisc.edu/htcondor/ubuntu/HTCondor-Release.gpg.key | sudo apt-key add - && \
+    yes | apt-get update && \
+    yes | apt-get install condor
+
+RUN wget -O - http://download.pegasus.isi.edu/pegasus/gpg.txt | sudo apt-key add - && \
+    echo 'deb [arch=amd64] http://download.pegasus.isi.edu/pegasus/ubuntu trusty main' | sudo tee /etc/apt/sources.list.d/pegasus.list && \
+    apt-get update && \
+    yes | apt-get install pegasus
