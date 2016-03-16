@@ -1,17 +1,8 @@
-# import all necessary packages
-import os,sys
-parentdir = os.path.dirname(__file__)
-sys.path.insert(0,parentdir)
-import requests
-import urllib
-import urllib2
-import json
 from collections import defaultdict
 
-from dispel4py.core import GenericPE
 from dispel4py.workflow_graph import WorkflowGraph
 from dispel4py.core import GenericPE
-from dispel4py.base import ProducerPE, IterativePE, ConsumerPE
+from dispel4py.base import ProducerPE
     
 
 ################################# PART 1: Create the Processing Elements  #################################
