@@ -66,5 +66,6 @@ USER root
 
 RUN yum install -y centos-release-SCL
 RUN yum install -y python27
+RUN scl enable python27 "easy_install pip && pip install requests"
 RUN cd dispel4py && scl enable python27 "python setup.py install"
-
+RUN chmod u+x /home/tutorial/pegasus_dispel4py/simple_experiment/command-job*
