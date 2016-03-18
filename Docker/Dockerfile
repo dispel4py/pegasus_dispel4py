@@ -34,7 +34,7 @@ RUN yum -y install pegasus
 
 #RUN cp -rf  /usr/share/doc/pegasus/tutorial/* /home/tutorial/
 #RUN chmod +x /home/tutorial/{generate_dax.py,plan_dax.sh} /home/tutorial/bin/*
-ADD pegasus/doc/tutorial /home/tutorial/
+#ADD pegasus/doc/tutorial /home/tutorial/
 RUN chown -R tutorial /home/tutorial/
 
 # Configure SCP
