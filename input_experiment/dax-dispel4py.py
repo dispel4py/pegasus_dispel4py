@@ -10,15 +10,15 @@ dispel4py = ADAG("dispel4py")
 #python -m dispel4py.new.processor simple curl-countlines.py -i 10
 #python -m dispel4py.new.processor simple split-countwords.py -d '{"split": [{"input": "myfile.txt"}]}'
 a = File("curl-countlines")
-a.addPFN(PFN("file:///home/tutorial/dispel4py/curl-countlines.py","local"))
+a.addPFN(PFN("file:///home/tutorial/pegasus_dispel4py/input_experiment/curl-countlines.py","local"))
 dispel4py.addFile(a)
 
 a1 = File("myinput")
-a1.addPFN(PFN("file:///home/tutorial/dispel4py/myinput.txt","local"))
+a1.addPFN(PFN("file:///home/tutorial/pegasus_dispel4py/input_experiment/myinput.txt","local"))
 dispel4py.addFile(a1)
 
 b = File("split-countwords")
-b.addPFN(PFN("file:///home/tutorial/dispel4py/split-countwords.py","local"))
+b.addPFN(PFN("file:///home/tutorial/pegasus_dispel4py/input_experiment/split-countwords.py","local"))
 dispel4py.addFile(b)
 
 # Add executables to the DAX-level replica catalog
