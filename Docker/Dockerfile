@@ -6,7 +6,7 @@ RUN yum -y update
 
 RUN useradd  --create-home --password pegasus123 tutorial
 
-RUN yum -y install which java-1.7.0-openjdk sudo mysql-devel postgresql-devel
+RUN yum -y install which java-1.7.0-openjdk sudo mysql-devel postgresql-devel wget git
 
 # Configure Sudo
 RUN echo -e "tutorial ALL=(ALL)       NOPASSWD: /etc/init.d/sshd\n" >> /etc/sudoers
