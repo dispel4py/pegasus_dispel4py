@@ -59,3 +59,12 @@ RUN echo -e "condor_master > /dev/null 2>&1" >> /home/tutorial/.bashrc
 RUN echo -e "sudo /etc/init.d/sshd start > /dev/null 2>&1" >> /home/tutorial/.bashrc
 
 WORKDIR /home/tutorial
+
+RUN git clone https://github.com/dispel4py/pegasus_dispel4py.git
+RUN git clone https://github.com/dispel4py/dispel4py.git
+USER root
+
+RUN yum install -y centos-release-SCL
+RUN yum install -y python27
+RUN cd dispel4py && scl enable python27 "python setup.py install"
+
