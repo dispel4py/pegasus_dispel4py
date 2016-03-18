@@ -10,20 +10,20 @@ dispel4py = ADAG("dispel4py")
 #python -m dispel4py.new.processor simple curl-countlines.py -i 10
 #python -m dispel4py.new.processor simple split-countwords.py -d '{"split": [{"input": "myfile.txt"}]}'
 a = File("curl-countlines")
-a.addPFN(PFN("file:///home/tutorial/dispel4py/curl-countlines.py","local"))
+a.addPFN(PFN("file:///home/tutorial/pegasus_dispel4py/simple_experiment/curl-countlines.py","local"))
 dispel4py.addFile(a)
 
 b = File("split-countwords")
-b.addPFN(PFN("file:///home/tutorial/dispel4py/split-countwords.py","local"))
+b.addPFN(PFN("file:///home/tutorial/pegasus_dispel4py/simple_experiment/split-countwords.py","local"))
 dispel4py.addFile(b)
 
 # Add executables to the DAX-level replica catalog
 e_command1 = Executable(namespace="curl", name="curlcount", version="4.0", os="linux", arch="x86_64", installed=True)
-e_command1.addPFN(PFN("file:///home/tutorial/command-job1.sh","local"))
+e_command1.addPFN(PFN("file:///home/tutorial/pegasus_dispel4py/simple_experiment/command-job1.sh","local"))
 dispel4py.addExecutable(e_command1)
 
 e_command2 = Executable(namespace="curl", name="splitcount", version="4.0", os="linux", arch="x86_64", installed=True)
-e_command2.addPFN(PFN("file:///home/tutorial/command-job2.sh","local"))
+e_command2.addPFN(PFN("file:///home/tutorial/pegasus_dispel4py/simple_experiment/command-job2.sh","local"))
 dispel4py.addExecutable(e_command2)
 
 
