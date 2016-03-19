@@ -6,7 +6,7 @@ RUN yum -y update
 
 RUN useradd  --create-home --password pegasus123 tutorial
 
-RUN yum -y install which java-1.7.0-openjdk sudo mysql-devel postgresql-devel wget git
+RUN yum -y install which jyum install java-1.7.0-openjdk-devel sudo mysql-devel postgresql-devel wget git
 
 # Configure Sudo
 RUN echo -e "tutorial ALL=(ALL)       NOPASSWD: /etc/init.d/sshd\n" >> /etc/sudoers
@@ -69,3 +69,16 @@ RUN yum install -y python27
 RUN scl enable python27 "easy_install pip && pip install requests"
 RUN cd dispel4py && scl enable python27 "python setup.py install"
 RUN chmod u+x /home/tutorial/pegasus_dispel4py/simple_experiment/command-job*
+
+####### Storm stuff
+
+RUN scl enable python27 "pip install thrift"
+
+USER tutorial
+RUN cd /home/tutorial && \
+wget http://apache.arvixe.com/storm/apache-storm-0.10.0/apache-storm-0.10.0.tar.gz && \
+tar xzf apache-storm-0.10.0.tar.gz && \
+mkdir /home/tutorial/.storm && \
+echo 'nimbus.host: "nimbus"' > /home/tutorial/.storm/storm.yaml
+
+USER root

@@ -1,0 +1,6 @@
+pegasus:
+    image: dispel4py/pegasus
+    external_links:
+        - storm_nimbus_1:nimbus
+    hostname: pegasus
+    command: sleep infinity
