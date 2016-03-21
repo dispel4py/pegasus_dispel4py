@@ -6,7 +6,7 @@ RUN yum -y update
 
 RUN useradd  --create-home --password pegasus123 tutorial
 
-RUN yum -y install which jyum install java-1.7.0-openjdk-devel sudo mysql-devel postgresql-devel wget git
+RUN yum -y install which jyum install java-1.7.0-openjdk-devel sudo mysql-devel postgresql-devel wget git nano
 
 # Configure Sudo
 RUN echo -e "tutorial ALL=(ALL)       NOPASSWD: /etc/init.d/sshd\n" >> /etc/sudoers
@@ -62,6 +62,8 @@ WORKDIR /home/tutorial
 
 RUN git clone https://github.com/dispel4py/pegasus_dispel4py.git
 RUN git clone https://github.com/dispel4py/dispel4py.git
+ADD ./storm /home/tutorial/dispel4py/
+ADD ./storm.py /home/tutorial/dispel4py/resources/
 USER root
 
 RUN yum install -y centos-release-SCL
