@@ -62,7 +62,7 @@ WORKDIR /home/tutorial
 
 RUN git clone https://github.com/dispel4py/pegasus_dispel4py.git
 RUN git clone https://github.com/dispel4py/dispel4py.git
-ADD ./storm /home/tutorial/dispel4py/
+ADD ./storm /home/tutorial/dispel4py/storm/
 ADD ./storm.py /home/tutorial/dispel4py/resources/
 USER root
 
