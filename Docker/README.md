@@ -32,3 +32,7 @@ Then start zookeeper and the Storm cluster with nimbus:
 Then start the container with dispel4py, Storm client and Pegasus:
 
     docker-compose -p pegasus -f ./docker-pegasus.yml up -d
+
+Log into the running Pegasus container:
+
+    docker exec -i -t pegasus_pegasus_1 bash
