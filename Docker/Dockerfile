@@ -27,7 +27,7 @@ RUN echo -e "tutorial ALL=(ALL)       NOPASSWD: /etc/init.d/sshd\n" >> /etc/sudo
 #RUN chmod -R g+w /var/{lib,log,lock,run}/condor
 
 # Get Condor yum repo
-RUN mkdir /run/lock
+#RUN mkdir /run/lock
 RUN curl -o /etc/yum.repos.d/condor.repo http://research.cs.wisc.edu/htcondor/yum/repo.d/htcondor-stable-rhel7.repo
 RUN yum -y install --enablerepo=centosplus condor
 RUN echo -e "TRUST_UID_DOMAIN = True\n" >> /etc/condor/condor_config.local
@@ -80,7 +80,7 @@ RUN easy_install pip
 RUN pip install requests
 RUN cd dispel4py && python setup.py install
 RUN chmod u+x /home/tutorial/pegasus_dispel4py/simple_experiment/command-job*
-#RUN chmod u+x /home/tutorial/pegasus_dispel4py/storm_experiment/command-job.sh
+RUN chmod u+x /home/tutorial/pegasus_dispel4py/storm_experiment/command-job.sh
 
 ####### Storm stuff
 
@@ -94,8 +94,8 @@ tar xzf apache-storm-0.10.0.tar.gz && \
 mkdir /home/tutorial/.storm && \
 echo 'nimbus.host: "nimbus"' > /home/tutorial/.storm/storm.yaml
 
-
 USER root
+RUN cp -r /home/tutorial/pegasus_dispel4py/Docker/storm /home/tutorial/dispel4py/.
 RUN cp /home/tutorial/pegasus_dispel4py/Docker/storm.py /home/tutorial/dispel4py/resources/.
 RUN cp -r /home/tutorial/dispel4py/dispel4py /home/tutorial/dispel4py/resources/.
 
