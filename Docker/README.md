@@ -23,7 +23,7 @@ Then watch progress of the job using the displayed job id, e.g.:
 Clone the docker composition:
 
     git clone https://github.com/wurstmeister/storm-docker.git	
-    docker-compose up
+    docker-compose up -d
     docker-compose scale supervisor=3
     
 Then start the container with dispel4py, Storm client and Pegasus:
