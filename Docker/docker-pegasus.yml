@@ -1,6 +1,6 @@
 pegasus:
     image: rosafilgueira/centos7_pegasus_dispel4py_cross
     external_links:
-        -stormdocker_nimbus_1:nimbus
+        - stormdocker_nimbus_1:nimbus
     hostname: pegasus
     command: sleep infinity
