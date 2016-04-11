@@ -22,12 +22,9 @@ Then watch progress of the job using the displayed job id, e.g.:
 
 Clone the docker composition:
 
-    git clone https://github.com/fhussonnois/docker-storm.git
-
-Then start zookeeper and the Storm cluster with nimbus:
-    
-    docker-compose -p storm -f docker-storm/docker-zookeeper.yml up -d
-    docker-compose -p storm -f docker-storm/docker-storm.yml up -d 
+    git clone https://github.com/wurstmeister/storm-docker.git	
+    docker-compose up
+    docker-compose scale supervisor=3
     
 Then start the container with dispel4py, Storm client and Pegasus:
 
