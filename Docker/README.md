@@ -22,7 +22,7 @@ Then watch progress of the job using the displayed job id, e.g.:
 
 Clone the docker composition:
 
-    git clone https://github.com/wurstmeister/storm-docker.git	
+    git clone https://github.com/dispel4py/storm-docker.git
     docker-compose up -d
     docker-compose scale supervisor=3
     
