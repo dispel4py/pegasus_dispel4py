@@ -1,5 +1,5 @@
 pegasus:
-    image: rosafilgueira/centos7_pegasus_dispel4py_cross
+    image: dispel4py/pegasus
     external_links:
         - stormdocker_nimbus_1:nimbus
     hostname: pegasus
