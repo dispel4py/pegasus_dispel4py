@@ -45,6 +45,7 @@ Clone the docker composition:
     docker-compose scale mpi_node=16 mpi_head=1
 
 Check the port that mpi_head is using:
+    
     docker ps
 
 Now you know the port, you can login to the mpi_head container. The username is mpirun.
