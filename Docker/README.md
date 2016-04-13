@@ -59,7 +59,7 @@ Once logged in the MPI-cluster, you need to configure:
 
      export LD_LIBRARY_PATH=/usr/lib/openmpi/lib/
 
-For testing and mpi4py example:
+For testing an mpi4py example using the mpi_nodes:
 	
 	cd mpi4py_benchmarks
 	create machines file from /etc/hosts (copy only the IP adresses, nothing else)
