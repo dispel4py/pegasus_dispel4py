@@ -1,0 +1,14 @@
+{
+  "root_workflow_uuid": "897eef43-08bb-4f5c-b25e-aff9b90ca1a5",
+  "workflow_uuid": "897eef43-08bb-4f5c-b25e-aff9b90ca1a5",
+  "wf_metadata": {},
+  "graph": {
+    "jobs": {
+      "clean_up_local_level_3_0": {},
+      "cleanup_dispel4py_0_local": {},
+      "create_dir_dispel4py_0_local": {},
+      "pipeline_ID0000001": {},
+      "stage_in_remote_local_0_0": {}
+    }
+  }
+}

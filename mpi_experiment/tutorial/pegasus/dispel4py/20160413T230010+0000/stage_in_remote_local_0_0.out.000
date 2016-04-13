@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<invocation xmlns="http://pegasus.isi.edu/schema/invocation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pegasus.isi.edu/schema/invocation http://pegasus.isi.edu/schema/iv-2.3.xsd" version="2.3" start="2016-04-13T23:00:47.203+00:00" duration="2.088" transformation="pegasus::transfer" derivation="null" resource="local" wf-label="dispel4py" wf-stamp="2016-04-13T22:59:43+00:00" interface="eth0" hostaddr="172.17.0.12" hostname="pegasus" pid="485" uid="1000" user="tutorial" gid="1000" group="tutorial" umask="0022">
+  <mainjob start="2016-04-13T23:00:47.205+00:00" duration="2.086" pid="486">
+    <usage utime="0.068" stime="0.016" maxrss="12064" minflt="13122" majflt="0" nswap="0" inblock="48" outblock="24" msgsnd="0" msgrcv="0" nsignals="0" nvcsw="49" nivcsw="11"/>
+    <status raw="0"><regular exitcode="0"/></status>
+    <statcall error="0">
+      <file name="/usr/bin/pegasus-transfer">23212F7573722F62696E2F707974686F</file>
+      <statinfo mode="0100755" size="116430" inode="201564220" nlink="1" blksize="4096" blocks="232" mtime="2016-01-27T17:08:49+00:00" atime="2016-04-13T23:00:32+00:00" ctime="2016-04-13T20:52:15+00:00" uid="0" user="root" gid="0" group="root"/>
+    </statcall>
+    <argument-vector>
+      <arg nr="1">--threads</arg>
+      <arg nr="2">2</arg>
+    </argument-vector>
+  </mainjob>
+  <jobids condor="3.0"/>
+  <cwd>/home/tutorial/pegasus_dispel4py/mpi_experiment/tutorial/pegasus/dispel4py/20160413T230010+0000</cwd>
+  <usage utime="0.000" stime="0.003" maxrss="1940" minflt="598" majflt="0" nswap="0" inblock="0" outblock="0" msgsnd="0" msgrcv="0" nsignals="0" nvcsw="3" nivcsw="1"/>
+  <machine page-size="4096">
+    <stamp>2016-04-13T23:00:47.203+00:00</stamp>
+    <uname system="linux" nodename="pegasus" release="3.10.0-229.4.2.el7.x86_64" machine="x86_64">#1 SMP Wed May 13 10:06:09 UTC 2015</uname>
+    <linux>
+      <ram total="131793812" free="117981400" shared="0" buffer="114952"/>
+      <swap total="0" free="0"/>
+      <boot idle="1498864.850">2016-04-13T14:18:26.344+00:00</boot>
+      <cpu count="48" speed="1940" vendor="GenuineIntel">Intel(R) Xeon(R) CPU E5-2670 v3 @ 2.30GHz</cpu>
+      <load min1="1.69" min5="0.46" min15="0.23"/>
+      <procs total="16" running="1" sleeping="14" zombie="1" vmsize="811616" rss="109896"/>
+      <task total="16" running="1" sleeping="14" zombie="1"/>
+    </linux>
+  </machine>
+  <statcall error="0" id="stdin">
+    <descriptor number="0"/>
+    <statinfo mode="0100664" size="359" inode="235004971" nlink="1" blksize="4096" blocks="8" mtime="2016-04-13T23:00:11+00:00" atime="2016-04-13T23:00:11+00:00" ctime="2016-04-13T23:00:11+00:00" uid="1000" user="tutorial" gid="1000" group="tutorial"/>
+  </statcall>
+  <statcall error="0" id="stdout">
+    <temporary name="/var/lib/condor/spool/local_univ_execute/dir_484/ks.out.tMpzH5" descriptor="3"/>
+    <statinfo mode="0100600" size="960" inode="134428178" nlink="1" blksize="4096" blocks="8" mtime="2016-04-13T23:00:49+00:00" atime="2016-04-13T23:00:47+00:00" ctime="2016-04-13T23:00:49+00:00" uid="1000" user="tutorial" gid="1000" group="tutorial"/>
+    <data>2016-04-13 23:00:47,256    INFO:  Reading URL pairs from stdin
+2016-04-13 23:00:47,256    INFO:  1 transfers loaded
+2016-04-13 23:00:47,278    INFO:  --------------------------------------------------------------------------------
+2016-04-13 23:00:47,278    INFO:  Starting transfers - attempt 1
+2016-04-13 23:00:49,282    INFO:  /bin/cp -f -R -L &apos;/home/tutorial/dispel4py/dispel4py/examples/graph_testing/pipeline_test.py&apos; &apos;/home/tutorial/work/tutorial/pegasus/dispel4py/20160413T230010+0000/pipe-countlines&apos;
+2016-04-13 23:00:49,286    INFO:  --------------------------------------------------------------------------------
+2016-04-13 23:00:49,286    INFO:  Stats: Total 1 transfers, 3.5 KB transferred in 2 seconds. Rate: 1.7 KB/s (13.7 Kb/s)
+2016-04-13 23:00:49,286    INFO:         Between sites local-&gt;local : 1 transfers, 3.5 KB transferred in 2 seconds. Rate: 1.7 KB/s (13.7 Kb/s)
+2016-04-13 23:00:49,286    INFO:  All transfers completed successfully.
+</data>
+  </statcall>
+  <statcall error="0" id="stderr">
+    <temporary name="/var/lib/condor/spool/local_univ_execute/dir_484/ks.err.hfDu0K" descriptor="4"/>
+    <statinfo mode="0100600" size="0" inode="134428179" nlink="1" blksize="4096" blocks="0" mtime="2016-04-13T23:00:47+00:00" atime="2016-04-13T23:00:47+00:00" ctime="2016-04-13T23:00:47+00:00" uid="1000" user="tutorial" gid="1000" group="tutorial"/>
+  </statcall>
+</invocation>

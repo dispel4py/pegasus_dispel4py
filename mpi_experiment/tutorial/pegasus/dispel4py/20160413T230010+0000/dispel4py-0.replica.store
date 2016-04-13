@@ -1,0 +1,2 @@
+# file-based replica catalog: 2016-04-13T23:00:11.117+00:00
+pipe-countlines file:///home/tutorial/dispel4py/dispel4py/examples/graph_testing/pipeline_test.py priority="100" site="local"

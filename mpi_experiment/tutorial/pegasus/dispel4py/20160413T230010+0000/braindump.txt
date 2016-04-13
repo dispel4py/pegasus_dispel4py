@@ -1,0 +1,27 @@
+user tutorial
+grid_dn null
+submit_hostname pegasus
+root_wf_uuid 897eef43-08bb-4f5c-b25e-aff9b90ca1a5
+wf_uuid 897eef43-08bb-4f5c-b25e-aff9b90ca1a5
+dax /home/tutorial/pegasus_dispel4py/mpi_experiment/dispel4py.dax
+dax_label dispel4py
+dax_index 0
+dax_version 3.6
+pegasus_wf_name dispel4py-0
+timestamp 20160413T230010+0000
+basedir /home/tutorial/pegasus_dispel4py/mpi_experiment
+submit_dir /home/tutorial/pegasus_dispel4py/mpi_experiment/tutorial/pegasus/dispel4py/20160413T230010+0000
+planner /usr/bin/pegasus-plan
+planner_version 4.6.0
+pegasus_build 20160127170751Z
+planner_arguments "--conf pegasusrc --dax dispel4py.dax --sites local --submit "
+jsd jobstate.log
+rundir 20160413T230010+0000
+bindir /usr/bin
+vogroup pegasus
+uses_pmc false
+properties pegasus.1775495018937377857.properties
+condor_log dispel4py-0.log
+notify dispel4py-0.notify
+dag dispel4py-0.dag
+type dag

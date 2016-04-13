@@ -1,0 +1,6 @@
+[
+  {
+    "id": 1,
+    "type": "remove",
+    "target": { "site_label": "local", "url": "file:///home/tutorial/work/tutorial/pegasus/dispel4py/20160413T230010+0000", "recursive": "True" } }
+]

@@ -1,0 +1,40 @@
+######################################################################
+# PEGASUS WMS GENERATED SUBMIT FILE
+# DAG : dispel4py, Index = 0, Count = 1
+# SUBMIT FILE NAME : stage_in_remote_local_0_0.sub
+######################################################################
+stream_error  = false
+stream_output = false
+environment = "CONDOR_JOBID=$(cluster).$(process) PEGASUS_WF_UUID=897eef43-08bb-4f5c-b25e-aff9b90ca1a5 PEGASUS_WF_LABEL=dispel4py PEGASUS_DAG_JOB_ID=stage_in_remote_local_0_0 PEGASUS_SITE=local "
+arguments = " -n pegasus::transfer -N null -i - -R local  -L dispel4py -T 2016-04-13T22:59:43+00:00 /usr/bin/../bin/pegasus-transfer  --threads 2 "
+copy_to_spool = false
+error = /home/tutorial/pegasus_dispel4py/mpi_experiment/tutorial/pegasus/dispel4py/20160413T230010+0000/stage_in_remote_local_0_0.err
+executable = /usr/bin/../bin/pegasus-kickstart
+input = /home/tutorial/pegasus_dispel4py/mpi_experiment/tutorial/pegasus/dispel4py/20160413T230010+0000/stage_in_remote_local_0_0.in
+log = /home/tutorial/pegasus_dispel4py/mpi_experiment/tutorial/pegasus/dispel4py/20160413T230010+0000/dispel4py-0.log
+notification = NEVER
+output = /home/tutorial/pegasus_dispel4py/mpi_experiment/tutorial/pegasus/dispel4py/20160413T230010+0000/stage_in_remote_local_0_0.out
+periodic_release = False
+periodic_remove = (JobStatus == 5) && ((CurrentTime - EnteredCurrentStatus) > 1800)
+priority = 700
+submit_event_user_notes = pool:local
+transfer_executable = false
+universe = local
++pegasus_generator = "Pegasus"
++pegasus_root_wf_uuid = "897eef43-08bb-4f5c-b25e-aff9b90ca1a5"
++pegasus_wf_uuid = "897eef43-08bb-4f5c-b25e-aff9b90ca1a5"
++pegasus_version = "4.6.0"
++pegasus_wf_name = "dispel4py-0"
++pegasus_wf_time = "20160413T230010+0000"
++pegasus_wf_xformation = "pegasus::transfer"
++pegasus_wf_dax_job_id = "null"
++pegasus_wf_dag_job_id = "stage_in_remote_local_0_0"
++pegasus_job_class = 2
++pegasus_site = "local"
++pegasus_job_runtime = 0
++pegasus_cores = 1
++pegasus_cluster_size = 1
+queue
+######################################################################
+# END OF SUBMIT FILE
+######################################################################
