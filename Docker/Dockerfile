@@ -111,3 +111,7 @@ RUN yum -y install python-basemap-data-hires.noarch
 RUN cd /etc/yum.repos.d/ && \
 wget https://copr.fedorainfracloud.org/coprs/qulogic/obspy/repo/epel-7/qulogic-obspy-epel-7.repo
 RUN yum -y install python-obspy
+
+##### Connect to OpenMPI cluster
+RUN git clone https://github.com/dispel4py/docker.openmpi.git
+RUN chmod 400 docker.openmpi/ssh/id_rsa.mpi

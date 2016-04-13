@@ -2,5 +2,6 @@ pegasus:
     image: dispel4py/pegasus
     external_links:
         - stormdocker_nimbus_1:nimbus
+        - dockeropenmpi_mpi_head_1:mpi_head
     hostname: pegasus
     command: sleep infinity
