@@ -26,6 +26,8 @@ Clone the docker composition:
     docker-compose up -d
     docker-compose scale supervisor=3
     
+Note: This Storm-cluster has installed dispel4py, numpy, scipy, networkx, obspy python libraries
+
 Then start the container with dispel4py, Storm client and Pegasus:
 
     docker-compose -p pegasus -f ./docker-pegasus.yml up -d
@@ -34,7 +36,6 @@ Log into the running Pegasus container:
 
     docker exec -i -t pegasus_pegasus_1 bash
 
-Note: This cluster has installed dispel4py, numpy, scipy, networkx, obspy python libraries
 
 # Run a cluster with MPI (OpenMPI + mpi4py)
 
@@ -54,7 +55,32 @@ It has been configured mpriun user to need password to login by ssh. However, id
     chmod 400 ssh/id_rsa.mpi
     ssh -i ssh/id_rsa.mpi -p 23227 mpirun@localhost
 
-For testing dispel4py with mpi mapping:
-     mpiexec -n 6 dispel4py mpi dispel4py.examples.graph_testing.pipeline_test	
+Once logged in the MPI-cluster, you need to configure:
 
-Note: This cluster has installed dispel4py, numpy, scipy, networkx, obspy python libraries
+     export LD_LIBRARY_PATH=/usr/lib/openmpi/lib/
+
+For testing and mpi4py example:
+	
+	cd mpi4py_benchmarks
+	create machines file from /etc/hosts (copy only the IP adresses, nothing else)
+	mpirun -hostfile machines -np 3 python helloworld.py 	
+
+For testing dispel4py with mpi mapping:
+     
+	mpiexec -n 6 dispel4py mpi dispel4py.examples.graph_testing.pipeline_test	
+
+Note: This MPI-cluster has installed dispel4py, numpy, scipy, networkx, obspy python libraries
+
+Then start the container with dispel4py, Storm client and Pegasus:
+
+    docker-compose -p pegasus -f ./docker-pegasus.yml up -d
+
+Log into the running Pegasus container:
+
+    docker exec -i -t pegasus_pegasus_1 bash
+
+Inside the Pegasus container, you can connect to the MPI-cluster like this:
+   
+    ssh -i docker.openmpi/ssh/id_rsa.mpi mpirun@mpi_head
+
+
