@@ -34,6 +34,8 @@ Log into the running Pegasus container:
 
     docker exec -i -t pegasus_pegasus_1 bash
 
+Note: This cluster has installed dispel4py, numpy, scipy, networkx, obspy python libraries
+
 # Run a cluster with MPI (OpenMPI + mpi4py)
 
 Clone the docker composition:
@@ -53,3 +55,5 @@ It has been configured mpriun user to need password to login by ssh. However, id
 
 For testing dispel4py with mpi mapping:
      mpiexec -n 6 dispel4py mpi dispel4py.examples.graph_testing.pipeline_test	
+
+Note: This cluster has installed dispel4py, numpy, scipy, networkx, obspy python libraries
