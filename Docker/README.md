@@ -42,8 +42,7 @@ Log into the running Pegasus container:
 Clone the docker composition:
 
     git clone https://github.com/dispel4py/docker.openmpi.git
-    docker-compose up -d
-    docker-compose scale mpi_node=16 mpi_head=1
+    docker-compose scale mpi_node=3 mpi_head=1
 
 Check the port that mpi_head is using:
     
@@ -55,19 +54,15 @@ It has been configured mpriun user to need password to login by ssh. However, id
     chmod 400 ssh/id_rsa.mpi
     ssh -i ssh/id_rsa.mpi -p 23227 mpirun@localhost
 
-Once logged in the MPI-cluster, you need to configure:
-
-     export LD_LIBRARY_PATH=/usr/lib/openmpi/lib/
-
 For testing an mpi4py example using the mpi_nodes:
 	
 	cd mpi4py_benchmarks
 	create machines file from /etc/hosts (copy only the IP adresses, nothing else)
-	mpirun -hostfile machines -np 3 python helloworld.py 	
+	mpiexec -hostfile machines -n 3 python helloworld.py   	
 
 For testing dispel4py with mpi mapping:
      
-	mpiexec -n 6 dispel4py mpi dispel4py.examples.graph_testing.pipeline_test	
+	mpiexec -n 6 -hostfile machines dispel4py mpi dispel4py.examples.graph_testing.pipeline_test	
 
 Note: This MPI-cluster has installed dispel4py, numpy, scipy, networkx, obspy python libraries
 
