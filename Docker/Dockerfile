@@ -81,6 +81,10 @@ RUN pip install requests
 RUN cd dispel4py && python setup.py install
 RUN chmod u+x /home/tutorial/pegasus_dispel4py/simple_experiment/command-job*
 RUN chmod u+x /home/tutorial/pegasus_dispel4py/storm_experiment/command-job.sh
+RUN chmod u+x /home/tutorial/pegasus_dispel4py/tc_cross_correlation/*
+RUN chmod u+x /home/tutorial/pegasus_dispel4py/cross_correlation_experiment/command-job*
+
+
 
 ####### Storm stuff
 
@@ -96,6 +100,7 @@ echo 'nimbus.host: "nimbus"' > /home/tutorial/.storm/storm.yaml
 
 USER root
 RUN cp -r /home/tutorial/pegasus_dispel4py/Docker/storm /home/tutorial/dispel4py/.
+RUN cp -r /home/tutorial/pegasus_dispel4py/tc_cross_correlation /home/tutorial/dispel4py/.
 RUN cp /home/tutorial/pegasus_dispel4py/Docker/storm.py /home/tutorial/dispel4py/resources/.
 RUN cp -r /home/tutorial/dispel4py/dispel4py /home/tutorial/dispel4py/resources/.
 
