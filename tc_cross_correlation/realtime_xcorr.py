@@ -19,7 +19,7 @@ import matplotlib.backends
 from obspy import read
 
 ROOT_DIR = './tc_cross_correlation/OUTPUT/'
-starttime = os.environ.get('DISPEL4PY_XCORR_STARTTIME')
+starttime='2015-04-06T06:00:00.000'
 
 class Product(GenericPE):
     def __init__(self):
