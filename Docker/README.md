@@ -52,7 +52,7 @@ Now you know the port, you can login to the mpi_head container. The username is 
 It has been configured mpriun user to need password to login by ssh. However, id_rsa.mpi key might need to be indicated.
  
     chmod 400 ssh/id_rsa.mpi
-    ssh -i ssh/id_rsa.mpi -p 23227 mpirun@localhost
+    ssh -i ssh/id_rsa.mpi -p 23227 tutorial@localhost
 
 For testing an mpi4py example using the mpi_nodes:
 	
