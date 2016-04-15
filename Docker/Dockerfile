@@ -76,6 +76,9 @@ RUN git clone https://github.com/dispel4py/dispel4py.git
 USER root
 
 RUN yum install -y python-setuptools
+RUN yum install -y zip
+RUN yum install -y unzip
+RUN yum install -y vim
 RUN easy_install pip 
 RUN pip install requests
 RUN cd dispel4py && python setup.py install
@@ -122,3 +125,4 @@ RUN yum -y install python-obspy
 RUN git clone https://github.com/dispel4py/docker.openmpi.git
 RUN chmod -R 600 /home/tutorial/docker.openmpi/ssh/* 
 RUN chown -R tutorial:tutorial /home/tutorial/docker.openmpi/ssh
+RUN chown -R tutorial:tutorial /home/tutorial/dispel4py/tc_cross_correlation
