@@ -100,7 +100,7 @@ echo 'nimbus.host: "nimbus"' > /home/tutorial/.storm/storm.yaml
 
 USER root
 RUN cp -r /home/tutorial/pegasus_dispel4py/Docker/storm /home/tutorial/dispel4py/.
-RUN cp -r /home/tutorial/pegasus_dispel4py/tc_cross_correlation /home/tutorial/dispel4py/.
+RUN cp -r /home/tutorial/pegasus_dispel4py/tc_cross_correlation /home/tutorial/dispel4py/resources/.
 RUN cp /home/tutorial/pegasus_dispel4py/Docker/storm.py /home/tutorial/dispel4py/resources/.
 RUN cp -r /home/tutorial/dispel4py/dispel4py /home/tutorial/dispel4py/resources/.
 
