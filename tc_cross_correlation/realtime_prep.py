@@ -177,8 +177,8 @@ class PreTaskPE(IterativePE):
 	  
 
 ROOT_DIR = './tc_cross_correlation/OUTPUT/'
-starttime = os.environ.get('DISPEL4PY_XCORR_STARTTIME')
-endtime = os.environ.get('DISPEL4PY_XCORR_ENDTIME')
+starttime='2015-04-06T06:00:00.000'
+endtime='2015-04-06T07:00:00.000'
 
 t_start = UTCDateTime(starttime)
 t_finish = UTCDateTime(endtime)
