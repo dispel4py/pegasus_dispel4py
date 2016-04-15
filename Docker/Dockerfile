@@ -120,4 +120,5 @@ RUN yum -y install python-obspy
 
 ##### Connect to OpenMPI cluster
 RUN git clone https://github.com/dispel4py/docker.openmpi.git
-RUN chmod 400 docker.openmpi/ssh/id_rsa.mpi
+RUN chmod -R 600 /home/tutorial/docker.openmpi/ssh/* 
+RUN chown -R tutorial:tutorial /home/tutorial/docker.openmpi/ssh
