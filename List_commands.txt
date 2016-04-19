@@ -17,3 +17,4 @@ chmod 400 ssh/id_rsa.mpi
 cd ..
 cd Docker/
 sudo docker-compose -p pegasus -f ./docker-pegasus.yml up -d
+sudo docker exec -i -t pegasus_pegasus_1 bash
