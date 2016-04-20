@@ -1,3 +1,4 @@
+#!/bin/sh
 unzip pegasus-tutorial.zip
 cd pegasus-tutorail
 git clone https://github.com/dispel4py/pegasus_dispel4py
@@ -5,7 +6,6 @@ cd pegasus_dispel4py/
 cd docker-storm/
 git clone https://github.com/dispel4py/storm-docker
 cd storm-docker/
-docker-compose up -d
 sudo docker-compose up -d
 sudo docker-compose scale supervisor=3
 cd ..
