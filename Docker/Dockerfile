@@ -89,7 +89,7 @@ RUN chmod u+x /home/tutorial/pegasus_dispel4py/cross_correlation_experiment/comm
 
 
 
-####### Storm stuff#######
+######## Storm stuff#######
 
 #RUN scl enable python27 "pip install thrift"
 RUN pip install thrift
