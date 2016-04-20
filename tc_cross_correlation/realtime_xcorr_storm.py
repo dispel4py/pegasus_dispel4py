@@ -42,7 +42,7 @@ class Xcorr(GenericPE):
         GenericPE.__init__(self)
 	self._add_input('input')
 	self._add_output('output', tuple_type=['number', 'index', 'xcorr'])
-    def _process(self, inputs):
+    def process(self, inputs):
 	self.log('Xcorr inputs are %s' % inputs['input'])
         str1=inputs['input'][2]
         str2=inputs['input'][3]
@@ -60,7 +60,7 @@ class StoreToFile(GenericPE):
 	self._add_input('input')
         self.filename = filename
 	self.counter = 0
-    def _process(self, inputs):
+    def process(self, inputs):
         xcorr1 = inputs['input'][2]
 	directory=ROOT_DIR+'XCORR/'+starttime+'/'+str(inputs['input'][0])+'_'+str(inputs['input'][1])
 	if not os.path.exists(directory):
@@ -68,7 +68,6 @@ class StoreToFile(GenericPE):
         fout = directory+'/%s_%s_%s.out' % (self.filename, inputs['input'][0], inputs['input'][1])
         np.save(fout, xcorr1)
 	self.counter += 1
-            #self.log('wrote file %s' % fout)
 	
 
 
@@ -77,7 +76,7 @@ class Plot(GenericPE):
         GenericPE.__init__(self)
 	self._add_input('input')
         self.filename = filename
-    def _process(self, inputs):
+    def process(self, inputs):
 	xcorr1 = inputs['input'][2]
         fout = ROOT_DIR+'XCORR/%s_%s_%s.plot.png' % (self.filename, inputs['input'][0], inputs['input'][1])
         sps=4
