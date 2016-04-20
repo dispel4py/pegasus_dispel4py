@@ -9,6 +9,7 @@ cd storm-docker/
 sudo docker-compose up -d
 sudo docker-compose scale supervisor=3
 cd ..
+cd ..
 git clone https://github.com/dispel4py/docker.openmpi.git
 cd docker.openmpi/
 sudo docker-compose scale mpi_node=3 mpi_head=1
