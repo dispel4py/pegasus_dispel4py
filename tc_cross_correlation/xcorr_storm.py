@@ -61,8 +61,10 @@ class Xcorr(IterativePE):
         str1=pickle.loads(data[2])                                                                                                                   
         str2=pickle.loads(data[3])                                                                                                                   
         try:                                                                                                                                         
-            xcorr1 = xcorrf_noFFT(str1, str2, 5000)                                                                                                  
-            return [data[0], data[1], xcorr1]                                                                                                        
+	    xcorr1 = xcorrf_noFFT(str1, str2, 5000)
+            xcorr1_pickle = pickle.dumps(xcorr1)
+            self.write('output',[inputs['input'][0], inputs['input'][1], xcorr1_pickle])  
+	                                                                                                     
         except:                                                                                                                                      
             self.log('error in %s_%s xcorr' % (data[0], data[1]))                                                                                    
             self.log(traceback.format_exc())                                                                                                         
