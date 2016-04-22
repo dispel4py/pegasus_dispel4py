@@ -58,7 +58,7 @@ class Xcorr(IterativePE):
         self._add_input ('input')
         self._add_output('output', tuple_type=['counter1','counter2', 'xcorr'])
     def _process(self, data):                                                                                                                        
-        str1=pickle.lodas(data[2])                                                                                                                   
+        str1=pickle.loads(data[2])                                                                                                                   
         str2=pickle.loads(data[3])                                                                                                                   
         try:                                                                                                                                         
             xcorr1 = xcorrf_noFFT(str1, str2, 5000)                                                                                                  
