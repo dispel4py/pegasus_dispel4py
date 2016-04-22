@@ -22,4 +22,4 @@ cp -r /home/tutorial/dispel4py/tc_cross_correlation/  /home/tutorial/dispel4py/r
 
 cd /home/tutorial/dispel4py
 
-python -m dispel4py.new.processor storm tc_cross_correlation/realtime_xcorr_storm.py -m remote 
+python -m dispel4py.new.processor storm tc_cross_correlation.xcorr_storm -m remote 
