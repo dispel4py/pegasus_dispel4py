@@ -1,7 +1,7 @@
 #!/bin/sh
 set -x
 #if you have already clone the pegasus_dispel4py repository inside pegasus-tutorial
-#directory, you do not need to do the first three steps
+#directory, you can comment the first three steps
 
 ################# Pegasus Container #####################################
 
