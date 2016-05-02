@@ -1,7 +1,7 @@
 #!/bin/sh
 set -x
 #if you have already clone the pegasus_dispel4py repository inside pegasus-tutorial
-#directory, you can comment the first three steps
+#directory, you can comment the first four steps
 
 ################# Pegasus Container #####################################
 
@@ -11,14 +11,14 @@ unzip pegasus-tutorial.zip
 cd pegasus-tutorail
 #Step 3
 git clone https://github.com/dispel4py/pegasus_dispel4py
-
-################ Storm Cluster Container ##############
+#Step 4
 cd pegasus_dispel4py/
+################ Storm Cluster Container ##############
 cd docker-storm/
 git clone https://github.com/dispel4py/storm-docker
 cd storm-docker/
 sudo docker-compose up -d
-sudo docker-compose scale supervisor=3
+sudo docker-compose scale supervisor=16
 cd ..
 cd ..
 
@@ -26,7 +26,7 @@ cd ..
 ################ MPI Cluster Container ##############
 git clone https://github.com/dispel4py/docker.openmpi.git
 cd docker.openmpi/
-sudo docker-compose scale mpi_node=3 mpi_head=1
+sudo docker-compose scale mpi_node=16 mpi_head=1
 sudo docker ps
 chmod 400 ssh/id_rsa.mpi
 cd ..
