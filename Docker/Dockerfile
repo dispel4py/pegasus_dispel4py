@@ -107,7 +107,7 @@ RUN cp -r /home/tutorial/pegasus_dispel4py/tc_cross_correlation /home/tutorial/d
 RUN cp -r /home/tutorial/pegasus_dispel4py/tc_cross_correlation /home/tutorial/dispel4py/.
 RUN cp /home/tutorial/pegasus_dispel4py/Docker/storm.py /home/tutorial/dispel4py/resources/.
 RUN cp -r /home/tutorial/dispel4py/dispel4py /home/tutorial/dispel4py/resources/.
-
+RUN chown tutorial:tutorial -R /home/tutorial/dispel4py/resources
 ##### Obspy stuff
 
 RUN wget http://dl.fedoraproject.org/pub/epel/7/x86_64/p/python2-future-0.15.2-7.el7.noarch.rpm
