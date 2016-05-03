@@ -18,4 +18,6 @@ rm -rf /home/tutorial/dispel4py/tc_cross_correlation/OUTPUT/DATA/preprocess_data
 
 cd /home/tutorial/dispel4py
 
-python -m dispel4py.new.processor multi tc_cross_correlation/realtime_xcorr.py -n 4
+#python -m dispel4py.new.processor multi tc_cross_correlation/realtime_xcorr.py -n 4
+
+python -m dispel4py.new.processor multi tc_cross_correlation/xcorr_storm.py -n 4
