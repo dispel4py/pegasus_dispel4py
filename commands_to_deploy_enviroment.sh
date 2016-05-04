@@ -1,8 +1,8 @@
 #!/bin/sh
 set -x
-#if you have already clone the pegasus_dispel4py repository inside pegasus-tutorial
-#directory, you can comment the first four steps
-
+# Note1: You might not need root rights for executing docker commands in your machine. 
+# Note2: If you have already cloned the pegasus_dispel4py repository inside pegasus-tutorial
+# directory, you not need to execute the first four steps
 ################# Pegasus Container #####################################
 
 #Step 1
