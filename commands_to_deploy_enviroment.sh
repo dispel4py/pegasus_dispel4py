@@ -8,7 +8,7 @@ set -x
 #Step 1
 unzip pegasus-tutorial.zip
 #Step 2
-cd pegasus-tutorail
+cd pegasus-tutorial
 #Step 3
 git clone https://github.com/dispel4py/pegasus_dispel4py
 #Step 4
